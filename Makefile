@@ -1,12 +1,15 @@
 
 
 
-all: 2021/website 2021/data-api 2021/data 2021/zdravniki 2021/zdravniki-data
+all: 2021/website 2021/data-api 2021/data 2021/zdravniki 2021/zdravniki-data 2021/website-backend
 
-.PHONY: all 2021/website 2021/data-api 2021/data 2021/zdravniki
+.PHONY: all 2021/website 2021/data-api 2021/data 2021/zdravniki 2021/website-backend
 
 2021/website:
 	gitstats -c start_date=2021-01-01 -c commit_end=46c4eed10dca0ef813dd44d7f544da9c755ebcc2 ../website ./2021/website
+
+2021/website-backend:
+	gitstats -c start_date=2021-01-01 -c commit_end=6e275e6e904ff9eeea5980f2f8eed74ca7262a0a ../website-backend ./2021/website-backend
 
 2021/data-api:
 	gitstats -c start_date=2021-01-01 -c commit_end=dbeb88bdbffffa0102341b6781399781f1bfad0b ../data-api ./2021/data-api
